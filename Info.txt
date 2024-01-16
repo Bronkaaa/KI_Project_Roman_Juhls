@@ -1,0 +1,127 @@
+- Lernrate (Learning Rate):
+
+Bestimmt die Größe der Schritte, die während des Gradientenabstiegs genommen werden.
+Beeinflusst die Konvergenzgeschwindigkeit und die Stabilität des Trainings.
+
+- Anzahl der Epochen:
+
+Die Anzahl der Durchläufe durch den gesamten Trainingsdatensatz.
+Beeinflusst, wie oft das Netzwerk die Trainingsdaten sieht und sich anpasst.
+
+- Batch-Größe:
+
+Die Anzahl der Datenpunkte, die für jede Aktualisierung der Gewichtungen verwendet werden.
+Beeinflusst die Effizienz und die Stabilität des Trainings.
+
+- Anzahl der Schichten und Neuronen pro Schicht:
+
+Bestimmt die Architektur des Netzwerks und seine Fähigkeit, komplexe Muster zu lernen.
+Beeinflusst die Modellkapazität und die Trainingszeit.
+
+- Aktivierungsfunktionen:
+
+Die nichtlinearen Funktionen, die auf die gewichteten Summen in den Neuronen angewendet werden.
+Beispiele sind ReLU, Sigmoid, Tanh.
+
+- Verlustfunktion (Loss Function):
+
+Definiert, wie gut die Vorhersagen des Netzwerks mit den tatsächlichen Werten übereinstimmen.
+Für Klassifikationsprobleme ist Cross-Entropy-Loss üblich, für Regression Mean Squared Error.
+
+- Optimierer:
+
+Der Algorithmus, der zur Anpassung der Gewichtungen verwendet wird.
+Beispiele sind Stochastic Gradient Descent (SGD), Adam, RMSprop.
+
+- L2-Regularisierung und L1-Regularisierung:
+
+Zusätzliche Strafterme für große Gewichtungen, um Overfitting zu verhindern.
+L2-Regularisierung fügt quadratische Strafterme hinzu, L1 fügt absolute Strafterme hinzu.
+
+- Dropout-Rate:
+
+Der Prozentsatz der Neuronen, die zufällig während des Trainings ausgeschaltet werden, um Overfitting zu verhindern.
+
+- Initialisierung der Gewichtungen:
+
+Die Methode zur Initialisierung der Gewichtungen vor dem Training.
+Beispiele sind Glorot-Initialisierung, He-Initialisierung.
+
+
+Arten von neuronalen Netzen:
+
+MLP (Multilayer Perceptron):
+
+Klassische Feedforward-Architektur mit mindestens einer versteckten Schicht.
+Gut für tabellarische Daten, einfache Klassifikation und Regression.
+
+
+CNN (Convolutional Neural Network):
+
+Enthält Convolutional Layers und Pooling Layers für die Verarbeitung von Bildern oder strukturierten Daten mit räumlichen Abhängigkeiten.
+Gut für Bildklassifikation, Objekterkennung und Bildgenerierung.
+
+
+Autoencoder:
+
+Besteht aus einem Encoder, der Daten auf eine latente Repräsentation abbildet, und einem Decoder, der die Daten rekonstruiert.
+Wird für Dimensionalitätsreduktion, Feature-Lerning und Generierung von ähnlichen Daten verwendet.
+
+
+GAN (Generative Adversarial Network):
+
+Setzt sich aus einem Generator und einem Diskriminator zusammen, die in einem Wettbewerb gegeneinander trainiert werden.
+Wird für die Generierung neuer Daten verwendet, z. B. Bilder, die nicht von echten Daten zu unterscheiden sind.
+
+
+
+für hyperparameteroptimierung:
+
+Lernrate (learning_rate):
+
+Eine zu hohe Lernrate kann zu instabiler Konvergenz führen, während eine zu niedrige Lernrate zu langsamem oder stagnierendem Training führen kann. Experimentieren Sie mit verschiedenen Lernraten, um die optimale Rate für Ihr Modell zu finden.
+
+
+Anzahl der versteckten Schichten (hidden_layers) und Neuronen pro Schicht:
+
+Die Architektur Ihres Modells beeinflusst seine Fähigkeit, komplexe Muster zu lernen. Experimentieren Sie mit der Anzahl der versteckten Schichten und der Anzahl der Neuronen pro Schicht, um eine Balance zwischen Modellkapazität und Vermeidung von Overfitting zu finden.
+
+
+Batch-Größe (batch_size):
+
+Die Batch-Größe beeinflusst, wie viele Beispiele gleichzeitig durch das Modell propagiert werden. Eine größere Batch-Größe kann die Konvergenz beschleunigen, aber möglicherweise mehr Speicher erfordern. Kleine Batch-Größen können zu stochastischerem Training führen. Experimentieren Sie, um die optimale Batch-Größe für Ihre Daten zu finden.
+
+
+Anzahl der Epochen (num_epochs):
+
+Die Anzahl der Epochen gibt an, wie oft das Modell das gesamte Trainingsdatenset durchläuft. Zu wenige Epochen können zu Unteranpassung führen, während zu viele Epochen zu Overfitting führen können. Überwachen Sie die Leistung auf einem Validierungsset und wählen Sie die Anzahl der Epochen entsprechend.
+
+
+Dropout (dropout):
+
+Dropout ist eine Regularisierungstechnik, bei der während des Trainings zufällig Neuronen deaktiviert werden, um Overfitting zu reduzieren. Experimentieren Sie mit unterschiedlichen Dropout-Raten.
+
+
+Aktivierungsfunktionen (activation):
+
+Die Wahl der Aktivierungsfunktionen (z. B. ReLU, Sigmoid, Tanh) kann die Modellleistung beeinflussen. ReLU wird oft in versteckten Schichten verwendet, während Sigmoid oder Softmax für die Ausgabeschicht in Klassifikationsproblemen verwendet werden.
+
+
+Gewichtsinitialisierung (weight_initialization):
+
+Die Art der Initialisierung der Gewichte kann die Konvergenzgeschwindigkeit beeinflussen. Experimentieren Sie mit verschiedenen Initialisierungsmethoden, um zu sehen, welche für Ihr Modell am besten funktioniert.
+
+
+Optimierungsalgorithmus (optimizer):
+
+Der Optimierungsalgorithmus beeinflusst die Aktualisierung der Modellgewichte. Adam ist ein beliebter Optimierungsalgorithmus, aber es gibt auch andere wie SGD. Experimentieren Sie, um den für Ihre Aufgabe am besten geeigneten Algorithmus zu finden.
+
+
+Batch-Normalisierung (batch_norm):
+
+Batch-Normalisierung kann die Konvergenzgeschwindigkeit verbessern. Experimentieren Sie damit, Batch-Normalisierung in verschiedenen Schichten zu verwenden oder zu deaktivieren.
+
+
+Regularisierungsterme (weight_decay):
+
+L2-Regularisierung (weight_decay) kann Overfitting reduzieren, indem sie die Größe der Gewichte begrenzt. Experimentieren Sie mit verschiedenen Regularisierungstermen.
